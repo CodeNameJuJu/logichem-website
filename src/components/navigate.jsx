@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 export default function Nav({ name, path }) {
-
     return (
         <li className='nav-item'>
-            <Link
+            <HashLink
                 className='nav-link link-text'
-                to={path}
+                smooth to={path} // smooth scrolling enabled
                 title={name}
             >
                 {name}
-            </Link>
+            </HashLink>
         </li>
-    )
+    );
 }

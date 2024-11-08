@@ -1,37 +1,62 @@
-// TeamMemberDetails.js
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { React, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { projectDetails } from '../data/projectData';
 
-function ServiceDetails() {
-    
+function Section({ image1, image2, image3, image4, name }) {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
+    return (
+        <div className='container mt-5 pt-5 mb-5 pb-5'>
+            <h3 className="section-heading text-center">{name}</h3>
+            <div className='row d-flex justify-content-center'>
+                <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
+                    <img className='img-fluid' src={image1} alt={name} />
+                </div>
+                <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
+                    <img className='img-fluid' src={image2} alt={name} />
+                </div>
+                <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
+                    <img className='img-fluid' src={image3} alt={name} />
+                </div>
+                <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
+                    <img className='img-fluid' src={image4} alt={name} />
+                </div>
+            </div>
+            <div className='text-center mt-4'>
+                <Link className="btn btn-primary" to="/projects" title='Back to Projects'>
+                    Back to Projects
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+function TeamMemberDetails() {
     const { projId } = useParams();
 
-    // Fetch the data for the specified team member
-    const project = projectDetails[projId];
-    console.log(project.image);
+    const project = projectDetails[projId.toLowerCase()];
 
     if (!project) {
         return <div>Team member not found.</div>;
     }
 
     return (
-        <div className='container  mt-5 pt-5 mb-5 pb-5'>
-            <div className='row d-flex justify-content-center'>
-                <img className='col-sm-4 ml-5 pl-5 shadow' src={project.image} alt={project.name} />
-                <div className='col-sm-8 ml-5 pl-5'>
-                    <section>
-                        <h2 className='container text-center section-title mb-2'>{project.name}</h2>
-                    </section>
-                    <p>{project.desc}</p>
-                </div>
-            </div>
-            <Link className="nav-link" to="/projects" title='Back to Projects'>
-                Back to Projects
-            </Link>
+        <div>
+            <Section
+                image1={project.image1}
+                image2={project.image2}
+                image3={project.image3}
+                image4={project.image4}
+                name={project.name}
+            />
         </div>
     );
 }
 
-export default ServiceDetails;
+export default TeamMemberDetails;

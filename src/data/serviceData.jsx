@@ -1,19 +1,63 @@
 export const servicesData = [
     {
-        name: "Service1",
-        displayName: "Service 1",
-        image: "../Images/Logo.png",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis malesuada velit, non dignissim nisi fringilla a. Mauris a lacinia massa. Fusce vitae nisi orci. Integer accumsan condimentum nisi vitae accumsan. Proin eget tristique lorem. Proin et nisl elementum, consectetur magna ut, porta neque. Nunc congue mi at rutrum sollicitudin. Integer efficitur ex ut metus facilisis aliquet. Fusce eu justo nec enim pulvinar cursus. Donec venenatis tincidunt vehicula. Nulla ullamcorper lorem eleifend congue consectetur. Quisque laoreet hendrerit felis ut iaculis. Pellentesque at arcu nec nibh tempus posuere vitae sit amet diam. Nullam rutrum purus vel dapibus vehicula. Duis blandit vehicula accumsan. Aliquam sit amet leo ligula. Vestibulum convallis lacus et lectus convallis, sit amet ullamcorper nisi auctor. Maecenas ante lorem, finibus vitae lacus eu, aliquet pharetra justo. Nunc commodo laoreet enim, sed hendrerit erat pharetra ac. Quisque non nulla elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque non sapien finibus mauris cursus malesuada nec tempus nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis tempor libero.",
+        name: "Electrical",
+        displayName: "Electrical",
+        path: "electrical",
+        image1: "../Images/1 Electrical/thisisengineering-raeng-0-29Dl7IAew-unsplash.jpg",
+    },
+    {
+        name: "Control",
+        displayName: "Control",
+        path: "control",
+        image1: "../Images/2 Control/thisisengineering-raeng-hoivM01c-vg-unsplash.jpg",
+    },
+    {
+        name: "Instrumentation",
+        displayName: "Instrumentation",
+        path: "instrumentation",
+        image1: "../Images/3 Instrumentation/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg",
+    },
+    {
+        name: "Drawings",
+        displayName: "Drawings",
+        path: "drawings",
+        image1: "../Images/4 Drawings/FLOWMETER-Layout1.jpg",
     },
    
 ];
 
 export const serviceDetails = {
-    service1: {
-        name: "Service1",
-        displayName: "Service 1",
-        image: "../Images/Logo.png",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce venenatis malesuada velit, non dignissim nisi fringilla a. Mauris a lacinia massa. Fusce vitae nisi orci. Integer accumsan condimentum nisi vitae accumsan. Proin eget tristique lorem. Proin et nisl elementum, consectetur magna ut, porta neque. Nunc congue mi at rutrum sollicitudin. Integer efficitur ex ut metus facilisis aliquet. Fusce eu justo nec enim pulvinar cursus. Donec venenatis tincidunt vehicula. Nulla ullamcorper lorem eleifend congue consectetur. Quisque laoreet hendrerit felis ut iaculis. Pellentesque at arcu nec nibh tempus posuere vitae sit amet diam. Nullam rutrum purus vel dapibus vehicula. Duis blandit vehicula accumsan. Aliquam sit amet leo ligula. Vestibulum convallis lacus et lectus convallis, sit amet ullamcorper nisi auctor. Maecenas ante lorem, finibus vitae lacus eu, aliquet pharetra justo. Nunc commodo laoreet enim, sed hendrerit erat pharetra ac. Quisque non nulla elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque non sapien finibus mauris cursus malesuada nec tempus nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus quis tempor libero.",
+    electrical: {
+        name: "Electrical",
+        displayName: "Electrical",
+        image1: "../Images/1 Electrical/ernest-brillo-9_vReDaom2Q-unsplash.jpg",
+        image2: "../Images/1 Electrical/nicolas-thomas-3GZi6OpSDcY-unsplash.jpg",
+        image3: "../Images/1 Electrical/shirish-suwal-ctmuaOO-JJI-unsplash.jpg",
+        image4: "../Images/1 Electrical/vishnu-mohanan-Rp2qgKrTEJQ-unsplash.jpg",
+    },
+    control: {
+        name: "Control",
+        displayName: "Control",
+        image1: "../Images/2 Control/thisisengineering-raeng-hoivM01c-vg-unsplash.jpg",
+        image2: "../Images/2 Control/isawred-ZERrk2fKuJI-unsplash.jpg",
+        image3: "../Images/2 Control/Logo.png",
+        image4: "../Images/2 Control/Logo.png",
+    },
+    instrumentation: {
+        name: "Instrumentation",
+        displayName: "Instrumentation",
+        image1: "../Images/3 Instrumentation/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg",
+        image2: "../Images/3 Instrumentation/christopher-burns-8KfCR12oeUM-unsplash.jpg",
+        image3: "../Images/3 Instrumentation/Picture 014.jpg",
+        image4: "../Images/3 Instrumentation/Logo.png",
+    },
+    drawings: {
+        name: "Drawings",
+        displayName: "Drawings",
+        image1: "../Images/4 Drawings/PLC01.jpg",
+        image2: "../Images/4 Drawings/FLOWMETER-Layout1.jpg",
+        image3: "../Images/4 Drawings/FLOW TRANSMITTER-05-Model.jpg",
+        image4: "../Images/4 Drawings/AIT 01-Model.jpg",
     },
    
 };
