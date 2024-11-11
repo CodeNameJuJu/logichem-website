@@ -16,16 +16,24 @@ function Section({ image1, image2, image3, image4, name }) {
             <h3 className="section-heading text-center">{name}</h3>
             <div className='row d-flex justify-content-center'>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
-                    <img className='img-fluid' src={image1} alt={name} />
+                    <figure>
+                        <img className='img-fluid' src={image1} alt={name} />
+                    </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
-                    <img className='img-fluid' src={image2} alt={name} />
+                    <figure>
+                        <img className='img-fluid' src={image2} alt={name} />
+                    </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
-                    <img className='img-fluid' src={image3} alt={name} />
+                    <figure>
+                        <img className='img-fluid' src={image3} alt={name} />
+                    </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
-                    <img className='img-fluid' src={image4} alt={name} />
+                    <figure>
+                        <img className='img-fluid' src={image4} alt={name} />
+                    </figure>
                 </div>
             </div>
             <div className='text-center mt-4'>

@@ -105,32 +105,38 @@ const Home = () => {
           <Carousel interval={5000}>
             <Carousel.Item>
               <div className="w-100 d-flex justify-content-center">
-                <img
-                  className="d-block img-fluid"
-                  src="../Images/5 Misc_images/1.jpg"
-                  alt="Second slide"
-                  style={{ width: '100%', height: 'auto' }}
-                />
+                <figure>
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/1.jpg"
+                    alt="Second slide"
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </figure>
               </div>
             </Carousel.Item>
             <Carousel.Item>
               <div className="w-100 d-flex justify-content-center">
-                <img
-                  className="d-block img-fluid"
-                  src="../Images/5 Misc_images/3.jpg"
-                  alt="Fifth slide"
-                  style={{ width: '100%', height: 'auto' }}
-                />
+                <figure>
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/3.jpg"
+                    alt="Fifth slide"
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </figure>
               </div>
             </Carousel.Item>
             <Carousel.Item>
               <div className="w-100 d-flex justify-content-center">
-                <img
-                  className="d-block img-fluid"
-                  src="../Images/5 Misc_images/2.jpg"
-                  alt="Eighth slide"
-                  style={{ width: '100%', height: 'auto' }}
-                />
+                <figure>
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/2.jpg"
+                    alt="Eighth slide"
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </figure>
               </div>
             </Carousel.Item>
           </Carousel>

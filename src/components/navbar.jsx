@@ -7,7 +7,9 @@ export default function Navbar() {
         <nav className='navbar navbar-expand-sm bg-grad sticky-top'>
             <div className='container-fluid'>
                 <Link className="navbar-brand text" to="/" title='Logichem Control'>
-                    <img src="../Images/Logo.png" alt="Logichem Control Logo" style={{ height: "4rem", width: "auto" }} />
+                    <figure>
+                        <img src="../Images/Logo.png" alt="Logichem Control Logo" style={{ height: "4rem", width: "auto" }} />
+                    </figure>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="line"></span>

@@ -14,11 +14,13 @@ function Projects() {
               <div className='card-container mb-4'>
                 <Link to={`/projects/${project.path}`}>
                   <div className="image-container position-relative">
-                    <img
-                      className='service-image img-fluid rounded'
-                      src={project.image}
-                      alt={project.name}
-                    />
+                    <figure>
+                      <img
+                        className='service-image img-fluid rounded'
+                        src={project.image}
+                        alt={project.name}
+                      />
+                    </figure>
                     <h3 className='section-title-overlay'>{project.name}</h3>
                   </div>
                 </Link>
