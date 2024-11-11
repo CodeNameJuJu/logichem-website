@@ -37,7 +37,7 @@ const projectsData = [
 ];
 
 const Home = () => {
-  const [setHoveredProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
 
   return (
