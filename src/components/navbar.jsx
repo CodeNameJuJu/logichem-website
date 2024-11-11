@@ -6,11 +6,11 @@ export default function Navbar() {
     return (
         <nav className='navbar navbar-expand-sm bg-grad sticky-top'>
             <div className='container-fluid'>
-                <Link className="navbar-brand text" to="/" title='Logichem Control'>
-                    <figure>
-                        <img src="../Images/Logo.png" alt="Logichem Control Logo" style={{ height: "4rem", width: "auto" }} />
-                    </figure>
-                </Link>
+                <figure className="p-0 m-0">
+                    <Link className="navbar-brand text" to="/" title='Logichem Control'>
+                        <img src="../Images/Logichem Logo.jpg" alt="Logichem Control Logo" style={{ height: "5.5rem", width: "auto" }} />
+                    </Link>
+                </figure>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="line"></span>
                     <span className="line"></span>
