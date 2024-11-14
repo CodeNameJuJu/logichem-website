@@ -2,8 +2,6 @@ import { React, useState } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import worldGeoJSON from '../data/world.geojson';
 import { Carousel } from 'react-bootstrap';
-import Image from 'react-image';
-
 
 const projectsData = [
   { name: 'South Africa', coordinates: [55, -122] },
