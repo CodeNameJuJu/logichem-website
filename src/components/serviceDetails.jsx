@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { serviceDetails } from '../data/serviceData';
@@ -17,22 +17,22 @@ function Section({ name, image1, image2, image3, image4 }) {
             <div className='row d-flex justify-content-center'>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
                     <figure>
-                        <img className='img-fluid' src={image1} alt={name} />
+                        <img className='img-fluid' src={image1} alt={name} loading="lazy" />
                     </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
                     <figure>
-                        <img className='img-fluid' src={image2} alt={name} />
+                        <img className='img-fluid' src={image2} alt={name} loading="lazy" />
                     </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
                     <figure>
-                        <img className='img-fluid' src={image3} alt={name} />
+                        <img className='img-fluid' src={image3} alt={name} loading="lazy" />
                     </figure>
                 </div>
                 <div className='col-12 col-md-6 mb-4 d-flex justify-content-center'>
                     <figure>
-                        <img className='img-fluid' src={image4} alt={name} />
+                        <img className='img-fluid' src={image4} alt={name} loading="lazy" />
                     </figure>
                 </div>
             </div>

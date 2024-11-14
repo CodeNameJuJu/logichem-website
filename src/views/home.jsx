@@ -2,6 +2,7 @@ import { React, useState } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 import worldGeoJSON from '../data/world.geojson';
 import { Carousel } from 'react-bootstrap';
+import Image from 'react-image';
 
 
 const projectsData = [
@@ -111,6 +112,7 @@ const Home = () => {
                     src="../Images/5 Misc_images/1.jpg"
                     alt="Second slide"
                     style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
                   />
                 </div>
               </figure>
@@ -123,6 +125,7 @@ const Home = () => {
                     src="../Images/5 Misc_images/3.jpg"
                     alt="Fifth slide"
                     style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
                   />
                 </div>
               </figure>
@@ -135,6 +138,7 @@ const Home = () => {
                     src="../Images/5 Misc_images/2.jpg"
                     alt="Eighth slide"
                     style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
                   />
                 </div>
               </figure>
