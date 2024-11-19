@@ -45,7 +45,7 @@ const Home = () => {
 
         {/* Responsive Carousel Section */}
         <section className="carousel-section py-5">
-          <Carousel interval={5000}>
+          <Carousel interval={10000}>
             <Carousel.Item>
               <figure>
                 <div className="w-100 d-flex justify-content-center">
