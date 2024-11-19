@@ -65,9 +65,9 @@ export const projectDetails = {
     mcc: {
         name: "MCC",
         displayName: "MCC",
-        image1: "../Images/3 Projects/5 MCC/Mill/20230222_110035.jpg",
-        image2: "../Images/3 Projects/5 MCC/Mill/20221117_103546.jpg",
-        image3: "../Images/3 Projects/Other Project pictures/Howden/MCC/20220828_113508.jpg",
+        image1: "../Images/3 Projects/5 MCC/20230222_110035.jpg",
+        image2: "../Images/3 Projects/5 MCC/20221117_103546.jpg",
+        image3: "../Images/3 Projects/5 MCC/20230222_105753.jpg",
         image4: "../Images/3 Projects/5 MCC/EDS - Stark resources se MCC.jpg",
     },
     plc: {
