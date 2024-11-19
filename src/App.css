@@ -715,14 +715,6 @@ footer {
     height: 780px;
   }
 
-  .image-container {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    position: relative;
-  }
-
   .section-title-overlay {
     bottom: 60px;
   }
