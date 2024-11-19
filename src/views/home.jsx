@@ -42,6 +42,52 @@ const Home = () => {
   return (
     <section id="home">
       <div className='fadeIn-animation-up' >
+
+        {/* Responsive Carousel Section */}
+        <section className="carousel-section py-5">
+          <Carousel interval={5000}>
+            <Carousel.Item>
+              <figure>
+                <div className="w-100 d-flex justify-content-center">
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/1.jpg"
+                    alt="Second slide"
+                    style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
+                  />
+                </div>
+              </figure>
+            </Carousel.Item>
+            <Carousel.Item>
+              <figure>
+                <div className="w-100 d-flex justify-content-center">
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/3.jpg"
+                    alt="Fifth slide"
+                    style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
+                  />
+                </div>
+              </figure>
+            </Carousel.Item>
+            <Carousel.Item>
+              <figure>
+                <div className="w-100 d-flex justify-content-center">
+                  <img
+                    className="d-block img-fluid"
+                    src="../Images/5 Misc_images/2.jpg"
+                    alt="Eighth slide"
+                    style={{ width: '100%', height: 'auto' }}
+                    loading="lazy"
+                  />
+                </div>
+              </figure>
+            </Carousel.Item>
+          </Carousel>
+        </section>
+
         {/* Map Section */}
         <section>
           <div className='map-container d-flex justify-content-center align-items-center'>
@@ -97,51 +143,6 @@ const Home = () => {
               With over three decades of experience, our commitment remains to exceptional project execution and unmatched workmanship in every engineering task we undertake. Based in Lonehill, Sandton, we have a reputation for quality, competitive pricing, and unbiased supplier selection. Our focus is always on finding the best equipment to meet project needs, not limiting ourselves to pre-existing solutions.
             </p>
           </div>
-        </section>
-
-        {/* Responsive Carousel Section */}
-        <section className="carousel-section py-5">
-          <Carousel interval={5000}>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/1.jpg"
-                    alt="Second slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/3.jpg"
-                    alt="Fifth slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/2.jpg"
-                    alt="Eighth slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-          </Carousel>
         </section>
 
         {/* Vision Section */}
