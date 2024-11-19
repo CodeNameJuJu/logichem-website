@@ -42,6 +42,12 @@ function MainContent() {
   );
 }
 
+const Loader = () => (
+  <div className="loader-container">
+    <div className="spinner"></div>
+  </div>
+);
+
 function App() {
   useEffect(() => {
     const handleReadyStateChange = () => {
@@ -61,7 +67,7 @@ function App() {
 
   return (
     <HashRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <MainContent />
       </Suspense>
     </HashRouter>
