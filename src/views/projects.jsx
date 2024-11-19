@@ -19,6 +19,7 @@ function Projects() {
                         className='service-image img-fluid rounded'
                         src={project.image}
                         alt={project.name}
+                        loading="lazy"
                       />
                     </figure>
                     <h3 className='section-title-overlay'>{project.name}</h3>

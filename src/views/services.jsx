@@ -18,6 +18,7 @@ function Services() {
                         className='service-image img-fluid rounded'
                         src={service.image1}
                         alt={service.name}
+                        loading="lazy"
                       />
                     </figure>
                     <h3 className='section-title-overlay'>{service.name}</h3>
