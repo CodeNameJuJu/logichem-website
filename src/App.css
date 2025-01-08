@@ -581,7 +581,7 @@ ul {
 }
 
 .bg-grad {
-  background: #3B5998;
+  background: linear-gradient(to right, white, #3B5998 100%);
 }
 
 .heading-grey {

@@ -38,7 +38,7 @@ function Section({ image1, image2, image3, image4, name }) {
             </div>
             <div className='text-center mt-4'>
                 <Link className="btn btn-primary" to="/projects" title='Back to Projects'>
-                    Back to Projects
+                    Back to Industries
                 </Link>
             </div>
         </div>
@@ -51,7 +51,7 @@ function TeamMemberDetails() {
     const project = projectDetails[projId.toLowerCase()];
 
     if (!project) {
-        return <div>Team member not found.</div>;
+        return <div>Industry not found.</div>;
     }
 
     return (
