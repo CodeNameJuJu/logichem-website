@@ -13,7 +13,7 @@ function Projects() {
             <div key={index} className='col-md-6 col-lg-6 pt-2 mt-2 pb-2 mb-2'>
               <div className='card-container mb-4'>
                 <Link to={`/projects/${project.path}`}>
-                  <div className="image-container position-relative">
+                  <div className="image-container-projects position-relative">
                     <figure>
                       <img
                         className='service-image img-fluid rounded'

@@ -235,7 +235,7 @@ body {
   color: #ccc;
 }
 
-.image-container {
+.image-container-services {
   width: 100%;
   height: 250px;
   position: relative;
@@ -253,6 +253,14 @@ body {
   font-weight: bold;
   color: white;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.image-container-projects {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
 }
 
 .service-image {

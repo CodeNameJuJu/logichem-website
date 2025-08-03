@@ -9,7 +9,7 @@ function Services() {
           {servicesData.map((service, index) => (
             <div key={index} className='col-sm-4 pt-2 mt-2 pb-2 mb-2'>
               <div className='card-container mb-4'>
-                  <div className="image-container position-relative">
+                  <div className="image-container-services position-relative">
                     <figure>
                       <img
                         className='service-image img-fluid rounded'
