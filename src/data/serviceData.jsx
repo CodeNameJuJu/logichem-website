@@ -17,13 +17,6 @@ export const servicesData = [
         path: "instrumentation",
         image1: "../Images/3 Instrumentation/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg",
     },
-    {
-        name: "Drawings",
-        displayName: "Drawings",
-        path: "drawings",
-        image1: "../Images/4 Drawings/FLOWMETER-Layout1.jpg",
-    },
-   
 ];
 
 export const serviceDetails = {
@@ -50,14 +43,6 @@ export const serviceDetails = {
         image2: "../Images/3 Instrumentation/christopher-burns-8KfCR12oeUM-unsplash.jpg",
         image3: "../Images/3 Instrumentation/Picture 014.jpg",
         image4: "../Images/3 Instrumentation/Logo.png",
-    },
-    drawings: {
-        name: "Drawings",
-        displayName: "Drawings",
-        image1: "../Images/4 Drawings/PLC01.jpg",
-        image2: "../Images/4 Drawings/FLOWMETER-Layout1.jpg",
-        image3: "../Images/4 Drawings/FLOW TRANSMITTER-05-Model.jpg",
-        image4: "../Images/4 Drawings/AIT 01-Model.jpg",
     },
    
 };
