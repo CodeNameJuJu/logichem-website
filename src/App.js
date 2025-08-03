@@ -9,7 +9,6 @@ const Projects = lazy(() => import('./views/projects'));
 const Contact = lazy(() => import('./views/contact'));
 const Navbar = lazy(() => import('./components/navbar'));
 const Footer = lazy(() => import('./components/footer'));
-const ServiceDetails = lazy(() => import('./components/serviceDetails'));
 const ProjectDetails = lazy(() => import('./components/projectDetails'));
 
 function MainContent() {
@@ -20,7 +19,7 @@ function MainContent() {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const isDetailPage = location.pathname.includes('/services/') || location.pathname.includes('/projects/');
+  const isDetailPage = location.pathname.includes('/projects/');
 
   return (
     <>
@@ -34,7 +33,6 @@ function MainContent() {
         </>
       )}
       <Routes>
-        <Route path="/services/:servId" element={<ServiceDetails />} />
         <Route path="/projects/:projId" element={<ProjectDetails />} />
       </Routes>
       <Footer />
