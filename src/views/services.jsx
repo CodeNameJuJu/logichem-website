@@ -11,19 +11,17 @@ function Services() {
           {servicesData.map((service, index) => (
             <div key={index} className='col-sm-4 pt-2 mt-2 pb-2 mb-2'>
               <div className='card-container mb-4'>
-                <Link to={`/services/${service.path}`}>
-                  <div className="image-container position-relative">
-                    <figure>
-                      <img
-                        className='service-image img-fluid rounded'
-                        src={service.image1}
-                        alt={service.name}
-                        loading="lazy"
-                      />
-                    </figure>
-                    <h3 className='section-title-overlay'>{service.name}</h3>
-                  </div>
-                </Link>
+                <div className="image-container position-relative">
+                  <figure>
+                    <img
+                      className='service-image img-fluid rounded'
+                      src={service.image1}
+                      alt={service.name}
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 className='section-title-overlay'>{service.name}</h3>
+                </div>
               </div>
             </div>
           ))}
