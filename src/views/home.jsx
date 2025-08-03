@@ -93,7 +93,7 @@ const Home = () => {
           <div className="container text-center">
             <h3 className="about-us-section-heading">Logichem Control has provided top-tier services since 1990</h3>
             <p className="lead text-center mt-3">
-              With over three decades of experience, our commitment remains to exceptional project execution and unmatched workmanship in every engineering task we undertake. Based in Lonehill, Sandton, we have a reputation for quality, competitive pricing, and unbiased supplier selection. Our focus is always on finding the best equipment to meet project needs, not limiting ourselves to pre-existing solutions.
+              With over three decades of experience, we remain dedicated to delivering exceptional project execution and superior workmanship in every engineering task we undertake. Based in Lonehill, Sandton, we have a reputation for quality, competitive pricing, and unbiased supplier selection. Our focus is always on finding the best equipment to meet project needs, not limiting ourselves to pre-existing solutions.
             </p>
           </div>
         </section>
