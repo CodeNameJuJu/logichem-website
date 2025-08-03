@@ -9,7 +9,7 @@ function Services() {
         <h3 className="section-heading text-center">Services</h3>
         <div className='row'>
           {servicesData.map((service, index) => (
-            <div key={index} className='col-md-6 col-lg-6 pt-2 mt-2 pb-2 mb-2'>
+            <div key={index} className='col-sm-4 pt-2 mt-2 pb-2 mb-2'>
               <div className='card-container mb-4'>
                 <Link to={`/services/${service.path}`}>
                   <div className="image-container position-relative">
