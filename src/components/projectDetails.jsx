@@ -45,7 +45,7 @@ function Section({ image1, image2, image3, image4, name }) {
     );
 }
 
-function TeamMemberDetails() {
+function ProjectDetails() {
     const { projId } = useParams();
 
     const project = projectDetails[projId.toLowerCase()];
@@ -67,4 +67,4 @@ function TeamMemberDetails() {
     );
 }
 
-export default TeamMemberDetails;
+export default ProjectDetails;
