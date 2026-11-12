@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "src": "/img/hero-1600.webp",
+    "width": 1600,
+    "height": 1131,
+    "srcset": "/img/hero-480.webp 480w, /img/hero-960.webp 960w, /img/hero-1600.webp 1600w"
+  },
+  "service-electrical": {
+    "src": "/img/service-electrical-1600.webp",
+    "width": 1600,
+    "height": 1067,
+    "srcset": "/img/service-electrical-480.webp 480w, /img/service-electrical-960.webp 960w, /img/service-electrical-1600.webp 1600w"
+  },
+  "service-control": {
+    "src": "/img/service-control-1600.webp",
+    "width": 1600,
+    "height": 1067,
+    "srcset": "/img/service-control-480.webp 480w, /img/service-control-960.webp 960w, /img/service-control-1600.webp 1600w"
+  },
+  "service-instrumentation": {
+    "src": "/img/service-instrumentation-1600.webp",
+    "width": 1600,
+    "height": 1201,
+    "srcset": "/img/service-instrumentation-480.webp 480w, /img/service-instrumentation-960.webp 960w, /img/service-instrumentation-1600.webp 1600w"
+  },
+  "industry-automation-card": {
+    "src": "/img/industry-automation-card-1600.webp",
+    "width": 1600,
+    "height": 820,
+    "srcset": "/img/industry-automation-card-480.webp 480w, /img/industry-automation-card-960.webp 960w, /img/industry-automation-card-1600.webp 1600w"
+  },
+  "industry-automation-1": {
+    "src": "/img/industry-automation-1-1600.webp",
+    "width": 1600,
+    "height": 820,
+    "srcset": "/img/industry-automation-1-480.webp 480w, /img/industry-automation-1-960.webp 960w, /img/industry-automation-1-1600.webp 1600w"
+  },
+  "industry-automation-2": {
+    "src": "/img/industry-automation-2-1600.webp",
+    "width": 1600,
+    "height": 766,
+    "srcset": "/img/industry-automation-2-480.webp 480w, /img/industry-automation-2-960.webp 960w, /img/industry-automation-2-1600.webp 1600w"
+  },
+  "industry-automation-3": {
+    "src": "/img/industry-automation-3-1600.webp",
+    "width": 1600,
+    "height": 757,
+    "srcset": "/img/industry-automation-3-480.webp 480w, /img/industry-automation-3-960.webp 960w, /img/industry-automation-3-1600.webp 1600w"
+  },
+  "industry-automation-4": {
+    "src": "/img/industry-automation-4-1600.webp",
+    "width": 1600,
+    "height": 827,
+    "srcset": "/img/industry-automation-4-480.webp 480w, /img/industry-automation-4-960.webp 960w, /img/industry-automation-4-1600.webp 1600w"
+  },
+  "industry-biochem-card": {
+    "src": "/img/industry-biochem-card-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-biochem-card-480.webp 480w, /img/industry-biochem-card-960.webp 960w, /img/industry-biochem-card-1600.webp 1600w"
+  },
+  "industry-biochem-1": {
+    "src": "/img/industry-biochem-1-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-biochem-1-480.webp 480w, /img/industry-biochem-1-960.webp 960w, /img/industry-biochem-1-1600.webp 1600w"
+  },
+  "industry-biochem-2": {
+    "src": "/img/industry-biochem-2-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-biochem-2-480.webp 480w, /img/industry-biochem-2-960.webp 960w, /img/industry-biochem-2-1600.webp 1600w"
+  },
+  "industry-biochem-3": {
+    "src": "/img/industry-biochem-3-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-biochem-3-480.webp 480w, /img/industry-biochem-3-960.webp 960w, /img/industry-biochem-3-1600.webp 1600w"
+  },
+  "industry-biochem-4": {
+    "src": "/img/industry-biochem-4-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-biochem-4-480.webp 480w, /img/industry-biochem-4-960.webp 960w, /img/industry-biochem-4-1600.webp 1600w"
+  },
+  "industry-power-card": {
+    "src": "/img/industry-power-card-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-power-card-480.webp 480w, /img/industry-power-card-960.webp 960w, /img/industry-power-card-1600.webp 1600w"
+  },
+  "industry-power-1": {
+    "src": "/img/industry-power-1-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-power-1-480.webp 480w, /img/industry-power-1-960.webp 960w, /img/industry-power-1-1600.webp 1600w"
+  },
+  "industry-power-2": {
+    "src": "/img/industry-power-2-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-power-2-480.webp 480w, /img/industry-power-2-960.webp 960w, /img/industry-power-2-1600.webp 1600w"
+  },
+  "industry-power-3": {
+    "src": "/img/industry-power-3-1600.webp",
+    "width": 1600,
+    "height": 1200,
+    "srcset": "/img/industry-power-3-480.webp 480w, /img/industry-power-3-960.webp 960w, /img/industry-power-3-1600.webp 1600w"
+  },
+  "industry-power-4": {
+    "src": "/img/industry-power-4-1600.webp",
+    "width": 1600,
+    "height": 2133,
+    "srcset": "/img/industry-power-4-480.webp 480w, /img/industry-power-4-960.webp 960w, /img/industry-power-4-1600.webp 1600w"
+  },
+  "industry-process-card": {
+    "src": "/img/industry-process-card-1600.webp",
+    "width": 1600,
+    "height": 2398,
+    "srcset": "/img/industry-process-card-480.webp 480w, /img/industry-process-card-960.webp 960w, /img/industry-process-card-1600.webp 1600w"
+  },
+  "industry-process-1": {
+    "src": "/img/industry-process-1-1600.webp",
+    "width": 1600,
+    "height": 2398,
+    "srcset": "/img/industry-process-1-480.webp 480w, /img/industry-process-1-960.webp 960w, /img/industry-process-1-1600.webp 1600w"
+  },
+  "industry-process-2": {
+    "src": "/img/industry-process-2-1600.webp",
+    "width": 1600,
+    "height": 2398,
+    "srcset": "/img/industry-process-2-480.webp 480w, /img/industry-process-2-960.webp 960w, /img/industry-process-2-1600.webp 1600w"
+  },
+  "industry-process-3": {
+    "src": "/img/industry-process-3-1600.webp",
+    "width": 1600,
+    "height": 2398,
+    "srcset": "/img/industry-process-3-480.webp 480w, /img/industry-process-3-960.webp 960w, /img/industry-process-3-1600.webp 1600w"
+  },
+  "industry-process-4": {
+    "src": "/img/industry-process-4-1600.webp",
+    "width": 1600,
+    "height": 2398,
+    "srcset": "/img/industry-process-4-480.webp 480w, /img/industry-process-4-960.webp 960w, /img/industry-process-4-1600.webp 1600w"
+  },
+  "industry-ventilation-card": {
+    "src": "/img/industry-ventilation-card-960.webp",
+    "width": 960,
+    "height": 720,
+    "srcset": "/img/industry-ventilation-card-480.webp 480w, /img/industry-ventilation-card-960.webp 960w"
+  },
+  "industry-ventilation-1": {
+    "src": "/img/industry-ventilation-1-960.webp",
+    "width": 960,
+    "height": 720,
+    "srcset": "/img/industry-ventilation-1-480.webp 480w, /img/industry-ventilation-1-960.webp 960w"
+  },
+  "industry-ventilation-2": {
+    "src": "/img/industry-ventilation-2-960.webp",
+    "width": 960,
+    "height": 720,
+    "srcset": "/img/industry-ventilation-2-480.webp 480w, /img/industry-ventilation-2-960.webp 960w"
+  },
+  "industry-ventilation-3": {
+    "src": "/img/industry-ventilation-3-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "srcset": "/img/industry-ventilation-3-480.webp 480w, /img/industry-ventilation-3-960.webp 960w, /img/industry-ventilation-3-1600.webp 1600w"
+  },
+  "industry-ventilation-4": {
+    "src": "/img/industry-ventilation-4-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "srcset": "/img/industry-ventilation-4-480.webp 480w, /img/industry-ventilation-4-960.webp 960w, /img/industry-ventilation-4-1600.webp 1600w"
+  },
+  "logo": {
+    "src": "/img/logo.webp",
+    "fallback": "/img/logo.png",
+    "width": 488,
+    "height": 96,
+    "srcset": "/img/logo.webp 1x"
+  }
+}

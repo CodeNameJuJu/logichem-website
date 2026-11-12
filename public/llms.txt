@@ -1,0 +1,55 @@
+# Logichem Control (Pty) Ltd
+
+> Electrical, control and instrumentation engineering company based in Lonehill,
+> Sandton, Johannesburg, South Africa. Established 1990 — over three decades of
+> industrial project delivery in 29 countries.
+
+## About
+
+Logichem Control provides electrical, control and instrumentation engineering
+for industrial plants, delivering high-quality solutions tailored to client
+specifications. The company is vendor-independent: it selects the best
+equipment for each project without supplier bias, rather than relying on
+pre-existing solutions. It is known for quality workmanship, competitive
+pricing and transparency.
+
+## Services
+
+- Electrical engineering — power, control and field infrastructure for industrial plants
+- Control engineering — PLC, SCADA and automation systems
+- Instrumentation engineering — selection and integration of industrial instrumentation
+
+## Industries
+
+- Automation
+- Biochem plants
+- Power plants
+- Process plants
+- Ventilation and cooling
+
+## Countries served
+
+South Africa, Botswana, Namibia, Zimbabwe, Mauritius, Tanzania, Uganda,
+Ethiopia, Eritrea, Democratic Republic of the Congo, Gabon, Ivory Coast, Mali,
+Turkey, Hungary, Croatia, Norway, Lithuania, Russia, Kazakhstan, Uzbekistan,
+Kyrgyzstan, United Arab Emirates, Iran, Singapore, Australia, Brazil, Chile,
+Peru.
+
+## Contact
+
+- Address: Lonehill Office Park, Block E, 20 Lonehill Blvd, Lone Hill, Sandton, Gauteng, 2062, South Africa
+- Phone: +27 11 465 2718
+- Email: info@logichem.co.za
+- Hours: Monday–Thursday 07:30–16:00, Friday 07:30–15:00 (SAST)
+
+## Pages
+
+- [Home](https://logichem.co.za/)
+- [Services](https://logichem.co.za/services)
+- [Industries](https://logichem.co.za/industries)
+- [Automation](https://logichem.co.za/industries/automation)
+- [Biochem plants](https://logichem.co.za/industries/biochem-plants)
+- [Power plants](https://logichem.co.za/industries/power-plants)
+- [Process plants](https://logichem.co.za/industries/process-plants)
+- [Ventilation and cooling](https://logichem.co.za/industries/ventilation-and-cooling)
+- [Contact](https://logichem.co.za/contact)

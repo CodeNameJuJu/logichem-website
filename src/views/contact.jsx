@@ -1,122 +1,154 @@
-import React, { useRef } from 'react';
-import { useForm } from 'react-hook-form'
-import '../App.css'
+import React, { useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
+import { company } from '../content/site';
 
-/* Maak components vir die contact page wat die contact form en google Iframe gaan wees */
+export default function Contact() {
+  const form = useRef(null);
+  const [status, setStatus] = useState({ state: 'idle', message: '' });
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
 
-function Form({ type, name, place }) {
-    return (
+  const sendEmail = async () => {
+    setStatus({ state: 'idle', message: '' });
+    try {
+      await emailjs.sendForm(
+        'service_xlprloe',
+        'template_wwtnp2g',
+        form.current,
+        'PrZ7kEJQwuAOirfKf'
+      );
+      setStatus({ state: 'success', message: 'Your message has been sent. We will be in touch shortly.' });
+      reset();
+    } catch (err) {
+      setStatus({
+        state: 'error',
+        message: 'Sorry, your message could not be sent. Please try again or email us directly at info@logichem.co.za.',
+      });
+    }
+  };
 
-        <div className="mb-3 pt-0">
-            <input type={type} name={name} placeholder={place}
-                className="form-control px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-            />
+  const fieldClass = (name) => `field${errors[name] ? ' field-error' : ''}`;
+
+  return (
+    <>
+      <section className="page-hero">
+        <div className="container">
+          <h1>Get in touch</h1>
+          <p className="page-hero-lede">
+            Logichem Control is based at {company.address.display}. Call{' '}
+            {company.phoneDisplay} or email {company.email} — or use the form below
+            and we’ll get back to you.
+          </p>
         </div>
+      </section>
 
-    );
-}
-
-export const Contact = () => {
-
-    // logic function to send emails to emailJS
-
-    const { handleSubmit, formState } = useForm()
-    const { isSubmitting } = formState
-
-    // logic function to send emails to emailJS
-
-    const form = useRef();
-
-    const sendEmail = () => {
-
-        emailjs.sendForm('service_xlprloe', 'template_wwtnp2g', form.current, 'PrZ7kEJQwuAOirfKf')
-            .then((result) => {
-                alert('message sent successfully...');
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            })
-
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve()
-            }, 4000)
-        })
-
-    };
-
-    return (
-
-        //contact form 
-        <section id="contact">
-            <div className='container text-center pb-4 mb-3 fadeIn-animation-up' >
-                <div>
-                    <br />
-                    <br />
-                    <h2 className='header-col text'>Get in touch!</h2>
-                    <br />
-                    <br />
-                </div>
-                <div className='row'>
-                    <div className='col-sm-6'>
-                        <h4 className='header-col text'>Please fill in the form below:</h4>
-                        <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-                            <Form
-                                type={"text"}
-                                name={"user_fName"}
-                                place={"First Name..."}
-                            />
-                            <Form
-                                type={"text"}
-                                name={"user_lName"}
-                                place={"Last Name..."}
-                            />
-                            <Form
-                                type={"email"}
-                                name={"user_email"}
-                                place={"Your email address..."}
-                            />
-                            <Form
-                                type={"phone"}
-                                name={"user_phone"}
-                                place={"Your phone number..."}
-                            />
-                            <div className="mb-3 pt-0">
-                                <textarea name="message" placeholder="Your message"
-                                    className="form-control px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-                                ></textarea>
-                            </div>
-                            <br />
-                            <div className="mb-3 pb-3 pt-0">
-                                <button disabled={isSubmitting} className="btn btn-bg btn-link">
-                                    {isSubmitting && (
-                                        <span className="spinner-grow spinner-grow-sm"></span>
-                                    )}
-                                    Send Message
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <div className='col-sm-6'>
-                        <h4 className='header-col text'>Where to find us:</h4>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14342.400616048593!2d28.0275992!3d-26.0139124!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95714f1efddc43%3A0xd91e7c33dc7e664!2sLogiChem%20Control%20(Pty)Ltd.!5e0!3m2!1sen!2sza!4v1698665593715!5m2!1sen!2sza"
-                            width="100%"
-                            height="100%"
-                            style={{ border: "0" }}
-                            allowFullScreen=""
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            title="Logichem Directions">
-                        </iframe>
-                    </div>
-                </div>
-                <br />
-                <br />
-                <br />
+      <section className="section" aria-label="Contact form and location">
+        <div className="container contact-grid">
+          <div>
+            <h2 className="contact-subheading">Send us a message</h2>
+            <form ref={form} onSubmit={handleSubmit(sendEmail)} noValidate>
+              <div className={fieldClass('user_fName')}>
+                <label htmlFor="user_fName">First name</label>
+                <input
+                  id="user_fName"
+                  type="text"
+                  autoComplete="given-name"
+                  aria-invalid={errors.user_fName ? 'true' : 'false'}
+                  {...register('user_fName', { required: 'Please enter your first name.' })}
+                />
+                {errors.user_fName && <p className="error-text" role="alert">{errors.user_fName.message}</p>}
+              </div>
+              <div className={fieldClass('user_lName')}>
+                <label htmlFor="user_lName">Last name</label>
+                <input
+                  id="user_lName"
+                  type="text"
+                  autoComplete="family-name"
+                  aria-invalid={errors.user_lName ? 'true' : 'false'}
+                  {...register('user_lName', { required: 'Please enter your last name.' })}
+                />
+                {errors.user_lName && <p className="error-text" role="alert">{errors.user_lName.message}</p>}
+              </div>
+              <div className={fieldClass('user_email')}>
+                <label htmlFor="user_email">Email address</label>
+                <input
+                  id="user_email"
+                  type="email"
+                  autoComplete="email"
+                  aria-invalid={errors.user_email ? 'true' : 'false'}
+                  {...register('user_email', {
+                    required: 'Please enter your email address.',
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                      message: 'Please enter a valid email address.',
+                    },
+                  })}
+                />
+                {errors.user_email && <p className="error-text" role="alert">{errors.user_email.message}</p>}
+              </div>
+              <div className={fieldClass('user_phone')}>
+                <label htmlFor="user_phone">Phone number</label>
+                <input
+                  id="user_phone"
+                  type="tel"
+                  autoComplete="tel"
+                  aria-invalid={errors.user_phone ? 'true' : 'false'}
+                  {...register('user_phone', { required: 'Please enter your phone number.' })}
+                />
+                {errors.user_phone && <p className="error-text" role="alert">{errors.user_phone.message}</p>}
+              </div>
+              <div className={fieldClass('message')}>
+                <label htmlFor="message">Your message</label>
+                <textarea
+                  id="message"
+                  rows="6"
+                  aria-invalid={errors.message ? 'true' : 'false'}
+                  {...register('message', { required: 'Please enter a message.' })}
+                />
+                {errors.message && <p className="error-text" role="alert">{errors.message.message}</p>}
+              </div>
+              <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                {isSubmitting && <span className="spinner" aria-hidden="true" />}
+                {isSubmitting ? 'Sending…' : 'Send message'}
+              </button>
+              {status.state !== 'idle' && (
+                <p className={`form-status form-status-${status.state}`} role="status">
+                  {status.message}
+                </p>
+              )}
+            </form>
+          </div>
+          <div>
+            <h2 className="contact-subheading">Where to find us</h2>
+            <div className="map-embed">
+              <iframe
+                src={company.address.mapsEmbed}
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Map to Logichem Control, Lonehill Office Park, Sandton"
+              />
             </div>
-        </section>
-    );
+            <address className="contact-address">
+              <p>{company.address.display}</p>
+              <p>
+                <a href={`mailto:${company.email}`}>{company.email}</a>
+                <br />
+                <a href={`tel:${company.phone.replace(/\s/g, '')}`}>{company.phoneDisplay}</a>
+              </p>
+              {company.hours.map((h) => (
+                <p key={h.days}>{h.days}: {h.time}</p>
+              ))}
+            </address>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }
-
-export default Contact;

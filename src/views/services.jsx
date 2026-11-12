@@ -1,32 +1,49 @@
-import { servicesData } from '../data/serviceData';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ResponsiveImage from '../components/ResponsiveImage';
+import { services } from '../content/services';
 
-function Services() {
+export default function Services() {
   return (
-    <section id="services">
-      <div className='container pt-3 mt-3 pb-3 mb-3 fadeIn-animation-up' >
-        <h3 className="section-heading text-center">Services</h3>
-        <div className='row'>
-          {servicesData.map((service, index) => (
-            <div key={index} className='col-sm-4 pt-2 mt-2 pb-2 mb-2'>
-              <div className='card-container mb-4'>
-                  <div className="image-container-services position-relative">
-                    <figure>
-                      <img
-                        className='service-image img-fluid rounded'
-                        src={service.image1}
-                        alt={service.name}
-                        loading="lazy"
-                      />
-                    </figure>
-                    <h3 className='section-title-overlay'>{service.name}</h3>
-                  </div>
+    <>
+      <section className="page-hero">
+        <div className="container">
+          <h1>Engineering services</h1>
+          <p className="page-hero-lede">
+            Logichem Control provides electrical, control and instrumentation
+            engineering for industrial plants — three disciplines delivered by one
+            accountable team, to each client’s specification.
+          </p>
+        </div>
+      </section>
+
+      <section className="section" aria-label="Service details">
+        <div className="container service-list">
+          {services.map((s, i) => (
+            <article key={s.slug} className={`service-row${i % 2 ? ' is-reversed' : ''}`}>
+              <div className="service-row-media">
+                <ResponsiveImage
+                  imageKey={s.imageKey}
+                  alt={s.imageAlt}
+                  sizes="(min-width: 900px) 560px, 90vw"
+                />
               </div>
-            </div>
+              <div className="service-row-body">
+                <h2>{s.name}</h2>
+                <p>{s.description}</p>
+              </div>
+            </article>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="section section-alt cta-band" aria-label="Contact call to action">
+        <div className="container">
+          <h2>Discuss your project with us</h2>
+          <p>Tell us what you need engineered — we’ll take it from there.</p>
+          <Link to="/contact" className="btn btn-primary">Get in touch</Link>
+        </div>
+      </section>
+    </>
   );
 }
-
-export default Services;

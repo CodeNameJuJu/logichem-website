@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Logichem Control website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Marketing site for Logichem Control (Pty) Ltd — https://logichem.co.za.
+React 18 + Vite with static prerendering (SSG) to `dist/`.
 
-## Available Scripts
+## Develop
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev        # vite dev server
+```
 
-### `npm start`
+## Build
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm run build      # vite client build + SSR bundle + prerender to dist/
+npm run preview    # serve the production build locally
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Every route is prerendered to `dist/<route>/index.html` with its own title,
+meta description, canonical URL, Open Graph tags and JSON-LD. Page metadata
+lives in `src/seo/routes.js`; all page copy lives in `src/content/`.
 
-### `npm test`
+## Images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Original photos stay in `public/Images` (excluded from the build output).
+To regenerate the responsive WebP variants in `public/img/` plus favicons and
+`og-image.jpg`:
 
-### `npm run build`
+```bash
+npm run images     # scripts/optimise-images.mjs (uses sharp)
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Verify SEO output
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm run check-seo  # validates prerendered HTML in dist/
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deploy
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **cPanel (Apache):** upload the *contents* of `dist/` — including
+  `.htaccess` — to the web root. The `.htaccess` forces HTTPS, serves the
+  prerendered pages, sets caching and maps 404s to `/404.html`.
+- **Railway:** automatic via `railway.json` — builds with `npm run build`,
+  serves `dist/` with `npx serve`.

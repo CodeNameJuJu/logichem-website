@@ -1,221 +1,136 @@
-import { React, useState } from 'react';
-import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
-import worldGeoJSON from '../data/world.geojson';
-import { Carousel } from 'react-bootstrap';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrophy, faBullseye, faUsers } from '@fortawesome/free-solid-svg-icons';
+import ResponsiveImage from '../components/ResponsiveImage';
+import MapSection from '../components/MapSection';
+import { hero, stats, about, vision, values, faq } from '../content/home';
+import { services } from '../content/services';
+import { industries } from '../content/industries';
 
-const projectsData = [
-  { name: 'South Africa', coordinates: [55, -122] },
-  { name: 'Botswana', coordinates: [56, -105] },
-  { name: 'Namibia', coordinates: [46, -105] },
-  { name: 'Tanzania', coordinates: [74, -72] },
-  { name: 'Zimbabwe', coordinates: [66, -100] },
-  { name: 'Mauritius', coordinates: [108, -103] },
-  { name: 'Democratic Republic of the Congo', coordinates: [57, -64] },
-  { name: 'Gabon', coordinates: [39, -61] },
-  { name: 'Ivory Coast', coordinates: [11.5, -44] },
-  { name: 'Mali', coordinates: [17, -22] },
-  { name: 'Eritrea', coordinates: [79, -26] },
-  { name: 'Uganda', coordinates: [71, -58] },
-  { name: 'Ethiopia', coordinates: [82, -42] },
-  { name: 'Turkey', coordinates: [69, 20] },
-  { name: 'Hungary', coordinates: [46, 34] },
-  { name: 'Croatia', coordinates: [42, 31.5] },
-  { name: 'Norway', coordinates: [30, 55] },
-  { name: 'Lithuania', coordinates: [50, 47.5] },
-  { name: 'United Arab Emirates', coordinates: [102, -10.5] },
-  { name: 'Russia', coordinates: [75, 50] },
-  { name: 'Kazakhstan', coordinates: [110, 37] },
-  { name: 'Uzbekistan', coordinates: [110, 23] },
-  { name: 'Kyrgyzstan', coordinates: [123, 24] },
-  { name: 'Iran', coordinates: [100, 7] },
-  { name: 'Singapore', coordinates: [183.5, -56] },
-  { name: 'Australia', coordinates: [220, -115] },
-  { name: 'Brazil', coordinates: [-60, -85] },
-  { name: 'Chile', coordinates: [-85, -110] },
-  { name: 'Peru', coordinates: [-99, -80] },
-];
+const icons = { trophy: faTrophy, bullseye: faBullseye, users: faUsers };
 
-const Home = () => {
-  const [, setHoveredProject] = useState(null);
-  const [hoveredCountry, setHoveredCountry] = useState(null);
-
+export default function Home() {
   return (
-    <section id="home">
-      <div className='fadeIn-animation-up' >
-
-        {/* Responsive Carousel Section */}
-        <section className="carousel-section py-5">
-          <Carousel interval={10000}>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/1.jpg"
-                    alt="Second slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/3.jpg"
-                    alt="Fifth slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-            <Carousel.Item>
-              <figure>
-                <div className="w-100 d-flex justify-content-center">
-                  <img
-                    className="d-block img-fluid"
-                    src="../Images/5 Misc_images/2.jpg"
-                    alt="Eighth slide"
-                    style={{ width: '100%', height: 'auto' }}
-                    loading="lazy"
-                  />
-                </div>
-              </figure>
-            </Carousel.Item>
-          </Carousel>
-        </section>
-
-        {/* History Section */}
-        <section className="about-us-section py-5">
-          <div className="container text-center">
-            <h3 className="about-us-section-heading">Logichem Control has provided top-tier services since 1990</h3>
-            <p className="lead text-center mt-3">
-              With over three decades of experience, we remain dedicated to delivering exceptional project execution and superior workmanship in every engineering task we undertake. Based in Lonehill, Sandton, we have a reputation for quality, competitive pricing, and unbiased supplier selection. Our focus is always on finding the best equipment to meet project needs, not limiting ourselves to pre-existing solutions.
-            </p>
+    <>
+      <section className="hero">
+        <ResponsiveImage
+          imageKey="hero"
+          alt=""
+          eager
+          sizes="100vw"
+          className="hero-image"
+        />
+        <div className="hero-overlay" />
+        <div className="container hero-content">
+          <h1>{hero.heading}</h1>
+          <p className="hero-subhead">{hero.subhead}</p>
+          <div className="hero-ctas">
+            <Link to="/contact" className="btn btn-primary">Get in touch</Link>
+            <Link to="/services" className="btn btn-outline-light">Our services</Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Map Section */}
-        <section>
-          <div className='map-container d-flex justify-content-center align-items-center'>
-            <ComposableMap
-              projection="geoEqualEarth"
-              style={{ width: '100%', height: '100%' }}
-              projectionConfig={{ scale: 200 }}
-            >
-              <Geographies geography={worldGeoJSON}>
-                {({ geographies }) =>
-                  geographies.map((geo) => {
-                    const countryName = geo.properties.name;
-                    const matchingProject = projectsData.find(project => project.name === countryName);
-                    const isBlue = Boolean(matchingProject);
-                    const fillColor = isBlue ? "#3B5998" : "#808285";
-
-                    return (
-                      <Geography
-                        key={geo.rsmKey}
-                        geography={geo}
-                        fill={hoveredCountry === geo.rsmKey ? '#2A4373' : fillColor}
-                        stroke="#808285"
-                        strokeWidth={hoveredCountry === geo.rsmKey ? 2 : 1}
-                        onMouseOver={() => {
-                          if (isBlue) {
-                            setHoveredCountry(geo.rsmKey);
-                            setHoveredProject(matchingProject || null);
-                          }
-                        }}
-                        onMouseOut={() => {
-                          setHoveredCountry(null);
-                          setHoveredProject(null);
-                        }}
-                        style={{
-                          default: { outline: "none" },
-                          hover: { outline: "none" },
-                          pressed: { outline: "none" },
-                        }}
-                      />
-                    );
-                  })
-                }
-              </Geographies>
-            </ComposableMap>
-          </div>
-        </section>
-
-        {/* Vision Section */}
-        <section id="what-we-do" className="vision-section text-center py-5">
-          <div className="container">
-            <h2 className="section-heading">Vision</h2>
-            <div className="row">
-              <div className="col-sm-4 pb-5">
-                <div className="card h-100 border-0 shadow">
-                  <div className="card-body">
-                    <i className="fas fa-trophy fa-2x text-primary"></i>
-                    <h4 className="card-title">30 Years of Dedication</h4>
-                    <p className="card-text">
-                      Persistence and consistency are key to our success. We believe in maintaining effort over time to achieve lasting results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-4 pb-5">
-                <div className="card h-100 border-0 shadow bg-blue">
-                  <div className="card-body">
-                    <i className="fas fa-bullseye fa-2x text-primary"></i>
-                    <h4 className="card-title">Strive for Excellence</h4>
-                    <p className="card-text">
-                      We are committed to maintaining the highest standards and continuously seeking innovative solutions in engineering.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-4 pb-5">
-                <div className="card h-100 border-0 shadow bg-blue">
-                  <div className="card-body">
-                    <i className="fas fa-users fa-2x text-primary"></i>
-                    <h4 className="card-title">Collaboration & Teamwork</h4>
-                    <p className="card-text">
-                      We align our efforts to achieve shared objectives, ensuring teamwork is at the heart of everything we do.
-                    </p>
-                  </div>
-                </div>
-              </div>
+      <section className="stats-strip" aria-label="Company facts">
+        <div className="container stats-grid">
+          {stats.map((s) => (
+            <div key={s.value} className="stat">
+              <span className="stat-value">{s.value}</span>
+              <span className="stat-label">{s.label}</span>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        {/* Values Section */}
-        <section className="values-section py-5 pb-5 mb-5">
-          <div className="container">
-            <h2 className="section-heading text-center">Company Values</h2>
-            <div className="d-flex justify-content-center flex-wrap">
-              <span className="badge">
-                <i className="fas fa-trophy"></i> Determination
-              </span>
-              <span className="badge">
-                <i className="fas fa-balance-scale"></i> Sufficiency
-              </span>
-              <span className="badge">
-                <i className="fas fa-chart-line"></i> Efficiency
-              </span>
-              <span className="badge">
-                <i className="fas fa-check-circle"></i> Effectiveness
-              </span>
-              <span className="badge">
-                <i className="fas fa-handshake"></i> Trust
-              </span>
-              <span className="badge">
-                <i className="fas fa-hard-hat"></i> Hard Work
-              </span>
-            </div>
+      <section className="section" aria-labelledby="about-heading">
+        <div className="container measure">
+          <h2 id="about-heading" className="section-heading">{about.heading}</h2>
+          {about.paragraphs.map((p) => (
+            <p key={p.slice(0, 32)} className="section-lede">{p}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="section section-alt" aria-labelledby="services-heading">
+        <div className="container">
+          <h2 id="services-heading" className="section-heading">What we do</h2>
+          <div className="card-grid card-grid-3">
+            {services.map((s) => (
+              <article key={s.slug} className="card">
+                <FontAwesomeIcon icon={icons[s.icon] || faBullseye} className="card-icon" aria-hidden="true" />
+                <h3>{s.name}</h3>
+                <p>{s.description}</p>
+              </article>
+            ))}
           </div>
-        </section>
-      </div>
-    </section>
+          <p className="section-more">
+            <Link to="/services">More about our services</Link>
+          </p>
+        </div>
+      </section>
+
+      <MapSection />
+
+      <section className="section section-alt" aria-labelledby="industries-heading">
+        <div className="container">
+          <h2 id="industries-heading" className="section-heading">Industries we serve</h2>
+          <div className="card-grid card-grid-3">
+            {industries.map((ind) => (
+              <Link key={ind.slug} to={`/industries/${ind.slug}`} className="card card-image">
+                <ResponsiveImage
+                  imageKey={ind.cardImageKey}
+                  alt={ind.cardAlt}
+                  sizes="(min-width: 992px) 360px, (min-width: 600px) 45vw, 90vw"
+                />
+                <div className="card-image-body">
+                  <h3>{ind.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="vision-heading">
+        <div className="container">
+          <h2 id="vision-heading" className="section-heading">Our vision</h2>
+          <div className="card-grid card-grid-3">
+            {vision.map((v) => (
+              <article key={v.title} className="card">
+                <FontAwesomeIcon icon={icons[v.icon]} className="card-icon" aria-hidden="true" />
+                <h3>{v.title}</h3>
+                <p>{v.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt" aria-labelledby="values-heading">
+        <div className="container measure">
+          <h2 id="values-heading" className="section-heading">Company values</h2>
+          <ul className="chips">
+            {values.map((v) => (
+              <li key={v} className="chip">{v}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="section" aria-labelledby="faq-heading">
+        <div className="container measure">
+          <h2 id="faq-heading" className="section-heading">Frequently asked questions</h2>
+          <div className="faq-list">
+            {faq.map((item) => (
+              <details key={item.question} className="faq-item">
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
-};
-
-export default Home;
+}
