@@ -4,7 +4,7 @@ export const services = [
     name: 'Electrical engineering',
     icon: 'bolt',
     imageKey: 'service-electrical',
-    imageAlt: 'Electrical engineering work in an industrial plant',
+    imageAlt: 'Electricity transmission pylon and overhead power lines',
     description:
       'Logichem Control provides electrical engineering for industrial plants, engineered to the client’s specification and the demands of the site, with equipment selected on merit for each project rather than from a fixed supplier list. The result is dependable electrical engineering built on more than three decades of industrial project experience.',
   },
@@ -13,7 +13,7 @@ export const services = [
     name: 'Control engineering',
     icon: 'microchip',
     imageKey: 'service-control',
-    imageAlt: 'Control engineering and automation equipment',
+    imageAlt: 'Illuminated push buttons and a meter on an industrial control panel',
     description:
       'Control engineering is at the heart of what Logichem Control does. The company engineers PLC, SCADA and automation systems that give operators reliable, transparent command of their processes. Solutions are built around the project’s real requirements — the best equipment for the job, chosen without supplier bias — so plants get control systems built around the client’s specification rather than a pre-existing product.',
   },

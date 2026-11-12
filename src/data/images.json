@@ -14,7 +14,7 @@
   "service-control": {
     "src": "/img/service-control-1600.webp",
     "width": 1600,
-    "height": 1067,
+    "height": 1990,
     "srcset": "/img/service-control-480.webp 480w, /img/service-control-960.webp 960w, /img/service-control-1600.webp 1600w"
   },
   "service-instrumentation": {
@@ -68,7 +68,7 @@
   "industry-biochem-2": {
     "src": "/img/industry-biochem-2-1600.webp",
     "width": 1600,
-    "height": 1200,
+    "height": 2133,
     "srcset": "/img/industry-biochem-2-480.webp 480w, /img/industry-biochem-2-960.webp 960w, /img/industry-biochem-2-1600.webp 1600w"
   },
   "industry-biochem-3": {
@@ -104,14 +104,14 @@
   "industry-power-3": {
     "src": "/img/industry-power-3-1600.webp",
     "width": 1600,
-    "height": 1200,
+    "height": 2133,
     "srcset": "/img/industry-power-3-480.webp 480w, /img/industry-power-3-960.webp 960w, /img/industry-power-3-1600.webp 1600w"
   },
   "industry-power-4": {
-    "src": "/img/industry-power-4-1600.webp",
-    "width": 1600,
-    "height": 2133,
-    "srcset": "/img/industry-power-4-480.webp 480w, /img/industry-power-4-960.webp 960w, /img/industry-power-4-1600.webp 1600w"
+    "src": "/img/industry-power-4-480.webp",
+    "width": 480,
+    "height": 345,
+    "srcset": "/img/industry-power-4-480.webp 480w"
   },
   "industry-process-card": {
     "src": "/img/industry-process-card-1600.webp",
@@ -144,34 +144,34 @@
     "srcset": "/img/industry-process-4-480.webp 480w, /img/industry-process-4-960.webp 960w, /img/industry-process-4-1600.webp 1600w"
   },
   "industry-ventilation-card": {
-    "src": "/img/industry-ventilation-card-960.webp",
-    "width": 960,
-    "height": 720,
-    "srcset": "/img/industry-ventilation-card-480.webp 480w, /img/industry-ventilation-card-960.webp 960w"
+    "src": "/img/industry-ventilation-card-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "srcset": "/img/industry-ventilation-card-480.webp 480w, /img/industry-ventilation-card-960.webp 960w, /img/industry-ventilation-card-1600.webp 1600w"
   },
   "industry-ventilation-1": {
-    "src": "/img/industry-ventilation-1-960.webp",
-    "width": 960,
-    "height": 720,
-    "srcset": "/img/industry-ventilation-1-480.webp 480w, /img/industry-ventilation-1-960.webp 960w"
+    "src": "/img/industry-ventilation-1-1600.webp",
+    "width": 1600,
+    "height": 900,
+    "srcset": "/img/industry-ventilation-1-480.webp 480w, /img/industry-ventilation-1-960.webp 960w, /img/industry-ventilation-1-1600.webp 1600w"
   },
   "industry-ventilation-2": {
-    "src": "/img/industry-ventilation-2-960.webp",
-    "width": 960,
-    "height": 720,
-    "srcset": "/img/industry-ventilation-2-480.webp 480w, /img/industry-ventilation-2-960.webp 960w"
+    "src": "/img/industry-ventilation-2-1600.webp",
+    "width": 1600,
+    "height": 2844,
+    "srcset": "/img/industry-ventilation-2-480.webp 480w, /img/industry-ventilation-2-960.webp 960w, /img/industry-ventilation-2-1600.webp 1600w"
   },
   "industry-ventilation-3": {
     "src": "/img/industry-ventilation-3-1600.webp",
     "width": 1600,
-    "height": 900,
+    "height": 2844,
     "srcset": "/img/industry-ventilation-3-480.webp 480w, /img/industry-ventilation-3-960.webp 960w, /img/industry-ventilation-3-1600.webp 1600w"
   },
   "industry-ventilation-4": {
-    "src": "/img/industry-ventilation-4-1600.webp",
-    "width": 1600,
-    "height": 900,
-    "srcset": "/img/industry-ventilation-4-480.webp 480w, /img/industry-ventilation-4-960.webp 960w, /img/industry-ventilation-4-1600.webp 1600w"
+    "src": "/img/industry-ventilation-4-960.webp",
+    "width": 960,
+    "height": 720,
+    "srcset": "/img/industry-ventilation-4-480.webp 480w, /img/industry-ventilation-4-960.webp 960w"
   },
   "logo": {
     "src": "/img/logo.webp",

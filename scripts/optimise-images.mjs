@@ -17,8 +17,8 @@ const QUALITY = 75;
 // key -> source file under public/Images
 const sources = {
   hero: '5 Misc_images/1.jpg',
-  'service-electrical': '1 Electrical/thisisengineering-raeng-0-29Dl7IAew-unsplash.jpg',
-  'service-control': '2 Control/thisisengineering-raeng-hoivM01c-vg-unsplash.jpg',
+  'service-electrical': '1 Electrical/ernest-brillo-9_vReDaom2Q-unsplash.jpg',
+  'service-control': '2 Control/isawred-ZERrk2fKuJI-unsplash.jpg',
   'service-instrumentation': '3 Instrumentation/vishnu-mohanan-pfR18JNEMv8-unsplash.jpg',
   'industry-automation-card': '3 Projects/Automation/Scada.jpg',
   'industry-automation-1': '3 Projects/Automation/Scada.jpg',
@@ -27,39 +27,47 @@ const sources = {
   'industry-automation-4': '3 Projects/Automation/SCADA 3.png',
   'industry-biochem-card': '3 Projects/Biochem Plants/oilspill 5.jpg',
   'industry-biochem-1': '3 Projects/Biochem Plants/Oilspill 1.jpg',
-  'industry-biochem-2': '3 Projects/Biochem Plants/Oilspill 2.jpg',
-  'industry-biochem-3': '3 Projects/Biochem Plants/oilspill 3.jpg',
-  'industry-biochem-4': '3 Projects/Biochem Plants/oilspill 4.jpg',
+  'industry-biochem-2': '3 Projects/Biochem Plants/oilspill 3.jpg',
+  'industry-biochem-3': '3 Projects/Biochem Plants/oilspill 4.jpg',
+  'industry-biochem-4': '3 Projects/Biochem Plants/oilspill 5.jpg',
   'industry-power-card': '3 Projects/Power Plants/Lucara Skids 1.jpg',
-  'industry-power-1': '3 Projects/Power Plants/Lucara Skids 2.jpg',
-  'industry-power-2': '3 Projects/Power Plants/Lucara Skids 3.jpg',
-  'industry-power-3': '3 Projects/Power Plants/Venentia Substation 1.jpg',
-  'industry-power-4': '3 Projects/Power Plants/Venentia Substation 2.jpg',
+  'industry-power-1': '3 Projects/Power Plants/Lucara Skids 1.jpg',
+  'industry-power-2': '3 Projects/Power Plants/Venentia Substation 1.jpg',
+  'industry-power-3': '3 Projects/Power Plants/Lucara Skids 3.jpg',
+  'industry-power-4': '5 Misc_images/6.jpg',
   'industry-process-card': '3 Projects/Process Plants/Nidec Tailings pumps 4.jpg',
   'industry-process-1': '3 Projects/Process Plants/Nidec Tailings pumps 4.jpg',
   'industry-process-2': '3 Projects/Process Plants/Nidec Tailings pumps 2.jpg',
   'industry-process-3': '3 Projects/Process Plants/Nidec Tailings pumps 3.jpg',
   'industry-process-4': '3 Projects/Process Plants/Nidec Tailings pumps 1.jpg',
-  'industry-ventilation-card': '3 Projects/Ventilation & Cooling/2c5247a9-1308-4e82-8675-7367770e3152.jpg',
-  'industry-ventilation-1': '3 Projects/Ventilation & Cooling/0eb0a11c-7c66-4cf8-bfae-d626bed58ade.jpg',
-  'industry-ventilation-2': '3 Projects/Ventilation & Cooling/9c3dc0ef-4f15-4c31-a618-ab1f47626b73.jpg',
-  'industry-ventilation-3': '3 Projects/Ventilation & Cooling/BBE Loulo 1.jpg',
-  'industry-ventilation-4': '3 Projects/Ventilation & Cooling/BBE Loulo 2.jpg',
+  'industry-ventilation-card': '3 Projects/Ventilation & Cooling/BBE Loulo 3.jpg',
+  'industry-ventilation-1': '3 Projects/Ventilation & Cooling/BBE Loulo 3.jpg',
+  'industry-ventilation-2': '3 Projects/Ventilation & Cooling/BBE Loulo 1.jpg',
+  'industry-ventilation-3': '3 Projects/Ventilation & Cooling/BBE Loulo 2.jpg',
+  'industry-ventilation-4': '3 Projects/Ventilation & Cooling/Seriti.jpeg',
 };
 
 const manifest = {};
 let written = 0;
 
+// Remove previous variants so a source with fewer widths leaves no stale files.
+for (const file of await fs.readdir(outDir)) {
+  if (Object.keys(sources).some((key) => new RegExp(`^${key}-\\d+\\.webp$`).test(file))) {
+    await fs.rm(path.join(outDir, file));
+  }
+}
+
 for (const [key, rel] of Object.entries(sources)) {
   const srcPath = path.join(imagesDir, rel);
-  const image = sharp(srcPath);
-  const meta = await image.metadata();
+  // Apply the EXIF orientation so phone photos are not shown sideways.
+  const { info: meta } = await sharp(srcPath).rotate().toBuffer({ resolveWithObject: true });
   const widths = WIDTHS.filter((w) => w <= meta.width);
   if (widths.length === 0) widths.push(meta.width);
   const files = [];
   for (const w of [...new Set(widths)]) {
     const name = `${key}-${w}.webp`;
     await sharp(srcPath)
+      .rotate()
       .resize({ width: w, withoutEnlargement: true })
       .webp({ quality: QUALITY })
       .toFile(path.join(outDir, name));
@@ -98,6 +106,7 @@ await sharp(logoSrc).resize(180, 180).png().toFile(path.join(pubDir, 'apple-touc
 
 const heroSrc = path.join(imagesDir, sources.hero);
 await sharp(heroSrc)
+  .rotate()
   .resize(1200, 630, { fit: 'cover', position: 'centre' })
   .jpeg({ quality: 80 })
   .toFile(path.join(pubDir, 'og-image.jpg'));
