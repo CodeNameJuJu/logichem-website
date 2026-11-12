@@ -176,8 +176,8 @@
   "logo": {
     "src": "/img/logo.webp",
     "fallback": "/img/logo.png",
-    "width": 488,
-    "height": 96,
+    "width": 813,
+    "height": 160,
     "srcset": "/img/logo.webp 1x"
   }
 }

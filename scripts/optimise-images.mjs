@@ -79,14 +79,14 @@ for (const [key, rel] of Object.entries(sources)) {
 // Logo: compact webp + png fallback for the header.
 const logoSrc = path.join(imagesDir, 'Logo.png');
 const logoMeta = await sharp(logoSrc).metadata();
-await sharp(logoSrc).resize({ height: 96 }).webp({ quality: 85 }).toFile(path.join(outDir, 'logo.webp'));
-const logoResized = await sharp(logoSrc).resize({ height: 96 }).png().toBuffer();
+await sharp(logoSrc).resize({ height: 160 }).webp({ quality: 85 }).toFile(path.join(outDir, 'logo.webp'));
+const logoResized = await sharp(logoSrc).resize({ height: 160 }).png().toBuffer();
 await fs.writeFile(path.join(outDir, 'logo.png'), logoResized);
 manifest['logo'] = {
   src: '/img/logo.webp',
   fallback: '/img/logo.png',
-  width: Math.round((logoMeta.width / logoMeta.height) * 96),
-  height: 96,
+  width: Math.round((logoMeta.width / logoMeta.height) * 160),
+  height: 160,
   srcset: `/img/logo.webp 1x`,
 };
 

@@ -36,7 +36,7 @@
   --container: 1200px;
   --radius: 10px;
   --shadow: 0 6px 24px rgba(21, 30, 49, 0.08);
-  --header-height: 72px;
+  --header-height: 96px;
 }
 
 *,
@@ -237,8 +237,18 @@ textarea:focus-visible {
 }
 
 .brand img {
-  height: 44px;
+  height: 68px;
   width: auto;
+}
+
+@media (max-width: 820px) {
+  :root {
+    --header-height: 76px;
+  }
+
+  .brand img {
+    height: 52px;
+  }
 }
 
 .primary-nav {
@@ -520,7 +530,7 @@ textarea:focus-visible {
 /* Map */
 
 .map-frame {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 2rem auto;
 }
 
