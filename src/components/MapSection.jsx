@@ -48,11 +48,18 @@ export default function MapSection() {
         <div className="country-list">
           {countryRegions.map((group) => (
             <div key={group.region} className="country-region">
-              <h3>{group.region}</h3>
+              <div className="country-region-header">
+                <h3>{group.region}</h3>
+                <span className="country-count">
+                  {group.countries.length} {group.countries.length === 1 ? 'country' : 'countries'}
+                </span>
+              </div>
               <ul>
-                {group.countries.map((c) => (
-                  <li key={c.id}>{c.name}</li>
-                ))}
+                {[...group.countries]
+                  .sort((a, b) => a.name.localeCompare(b.name))
+                  .map((c) => (
+                    <li key={c.id}>{c.name}</li>
+                  ))}
               </ul>
             </div>
           ))}
