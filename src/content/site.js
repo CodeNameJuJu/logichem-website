@@ -27,5 +27,5 @@ export const company = {
   tagline:
     'Electrical, control and instrumentation engineering for industrial plants across Africa and beyond.',
   summary:
-    'Logichem Control (Pty) Ltd is an electrical, control and instrumentation engineering company based in Lonehill, Sandton, Johannesburg. Established in 1990, the company delivers engineering solutions tailored to client specifications for industrial plants in 29 countries, with a focus on quality workmanship, competitive pricing and unbiased, vendor-independent supplier selection.',
+    'Logichem Control (Pty) Ltd is an electrical, control and instrumentation engineering company based in Lonehill, Sandton, Johannesburg. Established in 1990, the company delivers engineering solutions tailored to client specifications for industrial plants in 34 countries, with a focus on quality workmanship, competitive pricing and unbiased, vendor-independent supplier selection.',
 };

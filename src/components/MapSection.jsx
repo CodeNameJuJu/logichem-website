@@ -30,7 +30,7 @@ export default function MapSection() {
     <section className="section" aria-labelledby="map-heading">
       <div className="container">
         <h2 id="map-heading" className="section-heading">
-          Delivering projects in 29 countries
+          Delivering projects in 34 countries
         </h2>
         <p className="section-lede">
           From our base in Lonehill, Sandton, Logichem Control has delivered engineering

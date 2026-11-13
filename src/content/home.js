@@ -6,7 +6,7 @@ export const hero = {
 
 export const stats = [
   { value: 'Since 1990', label: 'Over three decades of project delivery' },
-  { value: '29 countries', label: 'Projects delivered worldwide' },
+  { value: '34 countries', label: 'Projects delivered worldwide' },
   { value: '3 core disciplines', label: 'Electrical, control and instrumentation' },
   { value: '5 industries', label: 'Sectors we engineer for' },
 ];
@@ -14,7 +14,7 @@ export const stats = [
 export const about = {
   heading: 'Quality engineering, without compromise',
   paragraphs: [
-    'Logichem Control (Pty) Ltd is an electrical, control and instrumentation engineering company based in Lonehill, Sandton, Johannesburg. Established in 1990, the company has delivered projects in 29 countries for clients in automation, biochem plants, power plants, process plants, and ventilation and cooling.',
+    'Logichem Control (Pty) Ltd is an electrical, control and instrumentation engineering company based in Lonehill, Sandton, Johannesburg. Established in 1990, the company has delivered projects in 34 countries for clients in automation, biochem plants, power plants, process plants, and ventilation and cooling.',
     'We prioritise the delivery of high-quality engineering solutions tailored to client specifications, leveraging our extensive experience and upholding a strong commitment to transparency. With over three decades of experience, we remain dedicated to exceptional project execution and superior workmanship in every engineering task we undertake. Our reputation rests on quality, competitive pricing and unbiased supplier selection — we focus on finding the best equipment to meet project needs, not limiting ourselves to pre-existing solutions.',
   ],
 };
@@ -65,7 +65,7 @@ export const faq = [
   {
     question: 'In which countries has Logichem Control delivered projects?',
     answer:
-      'The company has delivered projects in 29 countries, including South Africa, Botswana, Namibia, Zimbabwe, Tanzania, Uganda, Ethiopia, the Democratic Republic of the Congo, Australia, Brazil, Chile, Peru, Turkey, Russia and the United Arab Emirates.',
+      'The company has delivered projects in 34 countries, including South Africa, Botswana, Namibia, Zimbabwe, Tanzania, Uganda, Ethiopia, the Democratic Republic of the Congo, Australia, Brazil, Chile, Peru, Turkey, Russia and the United Arab Emirates.',
   },
   {
     question: 'Is Logichem Control tied to specific equipment suppliers?',

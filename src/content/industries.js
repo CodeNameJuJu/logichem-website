@@ -42,7 +42,7 @@ export const industries = [
       { imageKey: 'industry-power-4', alt: 'Open electrical control panels with drives and switchgear' },
     ],
     intro:
-      'In power generation, reliable electrical and control infrastructure is non-negotiable. Logichem Control has engineered solutions for power plants, covering the electrical, control and instrumentation disciplines that keep generation facilities running. With experience across 29 countries and a commitment to delivering to client specifications, the company selects the best equipment for each application and stands behind the quality of its workmanship.',
+      'In power generation, reliable electrical and control infrastructure is non-negotiable. Logichem Control has engineered solutions for power plants, covering the electrical, control and instrumentation disciplines that keep generation facilities running. With experience across 34 countries and a commitment to delivering to client specifications, the company selects the best equipment for each application and stands behind the quality of its workmanship.',
   },
   {
     slug: 'process-plants',

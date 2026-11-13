@@ -106,7 +106,7 @@ export const routeSeo = {
   '/': {
     title: 'Logichem Control | Electrical, Control & Instrumentation',
     description:
-      'Logichem Control (Pty) Ltd: electrical, control and instrumentation engineering since 1990, delivering industrial projects in 29 countries from Lonehill, Sandton.',
+      'Logichem Control (Pty) Ltd: electrical, control and instrumentation engineering since 1990, delivering industrial projects in 34 countries from Lonehill, Sandton.',
     path: '/',
     jsonLd: [orgGraph, faqJsonLd],
     ogType: 'website',
@@ -122,7 +122,7 @@ export const routeSeo = {
   '/industries': {
     title: 'Industries We Serve | Logichem Control',
     description:
-      'Logichem Control engineers for automation, biochem plants, power plants, process plants, and ventilation and cooling — industrial projects across 29 countries.',
+      'Logichem Control engineers for automation, biochem plants, power plants, process plants, and ventilation and cooling — industrial projects across 34 countries.',
     path: '/industries',
     jsonLd: [orgGraph],
     ogType: 'website',

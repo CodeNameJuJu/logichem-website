@@ -16,7 +16,7 @@ export default function CountriesMap() {
       height={420}
       style={{ width: '100%', height: 'auto' }}
       role="img"
-      aria-label="World map highlighting the 29 countries where Logichem Control has delivered projects"
+      aria-label="World map highlighting the 34 countries where Logichem Control has delivered projects"
     >
       <Geographies geography={GEO_URL}>
         {({ geographies }) =>

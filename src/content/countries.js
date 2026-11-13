@@ -19,6 +19,7 @@ export const countryRegions = [
       { name: 'Eritrea', id: 232 },
       { name: 'Democratic Republic of the Congo', id: 180 },
       { name: 'Gabon', id: 266 },
+      { name: 'Zambia', id: 894 },
     ],
   },
   {
@@ -26,6 +27,8 @@ export const countryRegions = [
     countries: [
       { name: 'Ivory Coast', id: 384 },
       { name: 'Mali', id: 466 },
+      { name: 'Liberia', id: 430 },
+      { name: 'Ghana', id: 288 },
     ],
   },
   {
@@ -57,6 +60,8 @@ export const countryRegions = [
       { name: 'Brazil', id: 76 },
       { name: 'Chile', id: 152 },
       { name: 'Peru', id: 604 },
+      { name: 'Colombia', id: 170 },
+      { name: 'Guyana', id: 328 },
     ],
   },
 ];
